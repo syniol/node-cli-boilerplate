@@ -1,5 +1,5 @@
 {
-  "name": "node-cli",
+  "name": "node-cli-boilerplate",
   "version": "1.0.0",
   "description": "Node CLI Template for Network and Platform applications",
   "main": "./dist/index.js",

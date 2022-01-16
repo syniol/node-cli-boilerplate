@@ -1,10 +1,11 @@
 import { randomUUID } from 'crypto';
 
-import chalk from "chalk";
+import chalk from 'chalk';
 
 
 export default function () {
     const log = console.log;
+
     log(chalk.yellow(
     '                                                                         \n' +
         ' ad88888ba  8b        d8  888b      88  88    ,ad8888ba,    88           \n' +
@@ -20,11 +21,11 @@ export default function () {
     ))
 
     log(
-        chalk.bgBlack.yellowBright('Boilerplate CLI for'),
-        chalk.bgBlack.greenBright('NodeJS'),
-        chalk.bgBlack.blue('(TypeScript)\n')
+        chalk.bold.yellowBright('Boilerplate CLI for'),
+        chalk.bold.greenBright('NodeJS'),
+        chalk.bold.blue('(TypeScript)\n')
     )
 
-    log('Execution ID:', chalk.bgBlack.bold.yellowBright(randomUUID()))
+    log('Execution ID:', chalk.bold.grey(randomUUID()))
     log(`© ${new Date().getFullYear()} Syniol Limited. All rights reserved.`)
 }
