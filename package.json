@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Node CLI Template for Network and Platform applications",
   "main": "./dist/index.js",
-  "repository": "https://github.com/syniol/node-cli",
+  "repository": "https://github.com/syniol/node-cli-boilerplate",
   "author": "Syniol Limited <hadi@syniol.com>",
   "license": "MIT",
   "private": false,
