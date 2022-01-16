@@ -1,8 +1,21 @@
 import { join } from 'path'
+import chalk from 'chalk'
 
 
 export async function loadFunction(functionName: string): Promise<{
     default<T>(args?: T): Promise<void>
 }> {
-    return await import(join(__dirname, '..', 'functions', functionName))
+    try {
+        return await import(join(__dirname, '..', 'functions', functionName))
+    } catch (_) {
+        console.error(chalk.red.bold(
+          `\nError finding template function:\n${functionName} from ${join(
+                __dirname,
+                '..',
+                'functions',
+            )}\n`,
+        ))
+
+        process.exit(-1)
+    }
 }
