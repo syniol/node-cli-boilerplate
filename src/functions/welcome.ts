@@ -4,7 +4,7 @@ import chalk from 'chalk';
 /**
  * Example function: It only prints Syniol's slogan without accepting any arguments.
  */
-export default function () {
+export default function (args?: string[]) {
   const log = console.log;
 
   log(
@@ -30,5 +30,5 @@ export default function () {
   );
 
   log('Execution ID:', chalk.bold.grey(randomUUID()));
-  log(`© ${new Date().getFullYear()} Syniol Limited. All rights reserved.`);
+  log(`Copyright \xA9 ${new Date().getFullYear()} Syniol Limited. All rights reserved.`);
 }
