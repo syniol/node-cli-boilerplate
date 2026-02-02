@@ -51,7 +51,7 @@ There is `Dockerfile` at the root of the project that could be utilised for depl
 Docker Compose/Swarm or Kubernetes.
 
 
-##### Credits
-Author: [Hadi Tajallaei](mailto:hadi@syniolcom?subject=Node.js CLI Boilerplate Support)
+#### Credits
+Author: [Hadi Tajallaei](mailto:hadi@syniolcom)
 
 Copyright &copy; 2022-2026 Syniol Limited. All rights reserved.
