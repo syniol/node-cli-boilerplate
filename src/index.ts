@@ -1,6 +1,4 @@
-import { main } from './lib'
-
-
-;(async () => {
-    await main()
-})()
+import { main } from './lib';
+(async () => {
+  await main();
+})();
