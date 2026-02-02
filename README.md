@@ -17,8 +17,6 @@ git clone git@github.com:syniol/node-cli-boilerplate.git
 
 Following the successful cloning of the repository, the example application can be initiated by executing the command `npm start`. Within the `src/functions` directory, you will discover sample functions. It is requested that these files be deleted and replaced with your proprietary functions.
 
-<p align="center"><img width="716" height="479" alt="Image" src="https://github.com/user-attachments/assets/97d32fb5-a43e-4361-a17f-59761beb1bb8" /></p>
-
 
 ## How-to Guide
 Within the `src/functions` directory, it is imperative to exclusively house execution functions. The organization of your services and injected dependencies can be tailored to align with your individual development requirements. Should the sequence of execution be a critical consideration, you may prefix files with numerical identifiers to dictate their order, for instance.
