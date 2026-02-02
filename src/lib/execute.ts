@@ -4,13 +4,15 @@ import { readdirSync } from 'node:fs';
 import { loadFunction, health } from './index';
 
 /**
- * main function iterates through files available under **functions** folder
- * inside the **src** folder of the project and uses _loadFunction_ to import
- * the found functions using lazy loading.
+ * The primary function is responsible for iterating through all files located 
+ * within the "functions" directory, which resides inside the "src" directory 
+ * of the project. It then employs the _loadFunction_ utility to facilitate 
+ * the importation of these identified functions through a process of lazy loading.
  *
- * After successful load of functions, it will execute all the found functions
- * using _promise.all_. All the arguments then will be passed as a parameter
- * inside each method.
+ * Upon the successful loading of all designated functions, the system will 
+ * proceed to execute them collectively utilising the _promise.all_ construct. 
+ * Subsequently, all pertinent arguments will be supplied as parameters to 
+ * each individual method.
  */
 export async function main() {
   const functions = readdirSync(join(__dirname, '..', 'functions'));

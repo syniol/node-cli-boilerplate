@@ -1,7 +1,5 @@
 # Node.js CLI TypeScript Boilerplate
-This project intended for internal use at Syniol; However, I made this Open Source 
-for other Node.js enthusiasts to enjoy a quick boilerplate CLI. This template is used 
-where Node.js is utilised as a main language of choice for your own company or clients.
+This project was originally developed for internal utilisation within Syniol. Nevertheless, it has been made publicly available as open-source to benefit other Node.js enthusiasts by providing a readily accessible boilerplate CLI. This template serves as a foundational tool for environments where Node.js is the predominant programming language selected for a company's internal projects or for client work.
 
 
 ## Up and Running
@@ -17,38 +15,35 @@ git clone https://github.com/syniol/node-cli-boilerplate.git
 git clone git@github.com:syniol/node-cli-boilerplate.git
 ```
 
-After successfully cloning the repository, You can test the example application by running `npm start`. 
-You can find example functions inside `src/functions` folder. Please remove these files and place 
-your own functions.
+Following the successful cloning of the repository, the example application can be initiated by executing the command `npm start`. Within the `src/functions` directory, you will discover sample functions. It is requested that these files be deleted and replaced with your proprietary functions.
+
+<p align="center"><img width="716" height="479" alt="Image" src="https://github.com/user-attachments/assets/97d32fb5-a43e-4361-a17f-59761beb1bb8" /></p>
 
 
-## How-to
-Only execution functions should be added inside the `src/functions` folder. Your services and 
-injected dependencies could be structured according to your personal development needs. In case 
-order of execution is important, you could prepend the files with a number. e.g.:
+## How-to Guide
+Within the `src/functions` directory, it is imperative to exclusively house execution functions. The organization of your services and injected dependencies can be tailored to align with your individual development requirements. Should the sequence of execution be a critical consideration, you may prefix files with numerical identifiers to dictate their order, for instance.
 
  * `1-cron-log-enrichment.ts`
  * `2-upload-logs-on-s3.ts`
 
-Signature method for functions should follow the same type as demonstrated below and no need to 
-name your method due to use of `export default`:
+The signature for functions must adhere to the type exemplified herein, and explicit naming of the method is unnecessary owing to the utilization of `export default`.
 
 ```typescript
 export default function (args?: string[])
 ```
-> CLI arguments provided by client will be automatically passed as an array of strings.
+> CLI arguments provided by the client will be automatically passed as an array of strings.
 
 
 ## Use cases
-This could be used where CLI is required to run a single or multiple services. Some of uses cases are:
- * Cron Jobs
- * CQS/CQRS Architecture where commands are executed in a separate microservice
- * Standalone application
+This functionality is applicable in scenarios necessitating the execution of one or more services via a Command Line Interface (CLI). Potential applications include:
+
+ * Scheduled tasks (Cron Jobs)
+ * Command Query Responsibility Segregation (CQS) or Command Query Responsibility Segregation (CQRS) architectural patterns, wherein commands are processed by an independent microservice
+ * Self-contained applications
 
 
 ## K8S and Docker Ready
-There is `Dockerfile` at the root of the project that could be utilised for deploying the CLI app inside via 
-Docker Compose/Swarm or Kubernetes.
+A Dockerfile is present at the project's root directory, which can be employed for deploying the command-line interface application within environments such as Docker Compose, Docker Swarm, or Kubernetes.
 
 
 ### Credits

@@ -1,8 +1,9 @@
 import { main } from './lib';
 
 /**
- * Executes the main method from library that includes all the
- * functions under **functions** folder.
+ * Initiates the primary function from the library, 
+ * encompassing all functionalities housed within 
+ * the designated **functions** directory.
  */
 (async () => {
   await main();
