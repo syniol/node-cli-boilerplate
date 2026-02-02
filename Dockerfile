@@ -6,14 +6,13 @@ WORKDIR /var/local/app
 
 ENV NODE_ENV=development
 
-RUN npm i && npm test && npm run build
+RUN npm i && npm audit && npm test && npm run build
 
 
 FROM node:22-alpine
 
 RUN apk update  \
-    && apk upgrade \
-    && apk add curl
+    && apk upgrade
 
 COPY --from=Builder /var/local/app/dist /var/local/app/dist
 COPY --from=Builder /var/local/app/package.json /var/local/app/dist/package.json
@@ -25,5 +24,8 @@ WORKDIR /var/local/app/dist
 ENV NODE_ENV=production
 
 RUN npm i --omit=dev
+
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD npm run start:prod health-check
 
 ENTRYPOINT ["npm", "run", "start:prod"]
