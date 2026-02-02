@@ -1,12 +1,11 @@
-import { join } from 'path'
+import { join } from 'node:path'
+import { readdirSync } from 'node:fs'
 
 import { loadFunction } from './loader'
 
 
 export async function main() {
-    const { functions }: { functions: string[] } = await import(
-        join(__dirname, '..', '..', 'template.json')
-    )
+    const functions = readdirSync(join(__dirname, '..', 'functions'))
     const args = process.argv.slice(2)
 
     const tasks: Promise<void>[] = []
