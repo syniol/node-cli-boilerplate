@@ -1,6 +1,9 @@
 import { randomUUID } from 'node:crypto';
 import chalk from 'chalk';
 
+/**
+ * Example function: It only prints Syniol's slogan without accepting any arguments.
+ */
 export default function () {
   const log = console.log;
 

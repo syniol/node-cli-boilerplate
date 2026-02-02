@@ -1,6 +1,12 @@
 import { join } from 'node:path';
 import chalk from 'chalk';
 
+/**
+ * It will dynamically import a single function using lazy loading
+ *
+ * @param functionName string
+ * @return Promise<{ default<T>(args?: T): Promise<void> }>
+ */
 export async function loadFunction(functionName: string): Promise<{
   default<T>(args?: T): Promise<void>;
 }> {
